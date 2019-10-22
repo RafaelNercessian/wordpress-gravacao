@@ -6,4 +6,6 @@
  * Author: Rafael Nercessian
  */
 
-error_log("Estou dentro do plugin dos patrocinadores");
+if(!defined('ABSPATH')){
+    die;
+}

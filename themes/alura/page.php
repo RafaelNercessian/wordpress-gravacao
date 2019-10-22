@@ -14,7 +14,7 @@ endif;
 ?>
     <section class="sidebar-page">
         <?php
-        if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Widget Alurinha")) ;
+        if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Widget Alura")) ;
         ?>
     </section>
     </section>

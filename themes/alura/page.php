@@ -18,6 +18,5 @@ endif;
         ?>
     </section>
     </section>
-<p>Estou dento do arquivo page.php</p>
 <?php
 get_footer();

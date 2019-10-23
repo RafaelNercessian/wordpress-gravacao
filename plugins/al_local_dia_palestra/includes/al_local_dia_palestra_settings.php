@@ -23,6 +23,7 @@ function al_local_dia_palestra_menu_pagina()
             <?php
             do_settings_sections('local-palestra');
             settings_fields('al_local_dia_palestra_settings');
+            submit_button();
             ?>
         </form>
     </div>
@@ -32,6 +33,7 @@ function al_local_dia_palestra_menu_pagina()
 add_action('admin_menu', 'al_local_dia_palestra_secao');
 function al_local_dia_palestra_secao()
 {
+    //Seção
     add_settings_section(
         'al_local_dia_palestra_secao',
         'Configurações do local da palestra',
@@ -39,6 +41,7 @@ function al_local_dia_palestra_secao()
         'local-palestra'
     );
 
+    //Endereço
     add_settings_field(
         'al_local_dia_palestra_endereco',
         'Endereço',
@@ -50,6 +53,34 @@ function al_local_dia_palestra_secao()
     register_setting(
         'al_local_dia_palestra_settings',
         'al_local_dia_palestra_endereco'
+    );
+
+    //Cidade
+    add_settings_field(
+        'al_local_dia_palestra_cidade',
+        'Cidade',
+        'al_local_dia_palestra_cidade',
+        'local-palestra',
+        'al_local_dia_palestra_secao'
+    );
+
+    register_setting(
+        'al_local_dia_palestra_settings',
+        'al_local_dia_palestra_cidade'
+    );
+
+    //Data
+    add_settings_field(
+        'al_local_dia_palestra_data',
+        'Data',
+        'al_local_dia_palestra_data',
+        'local-palestra',
+        'al_local_dia_palestra_secao'
+    );
+
+    register_setting(
+        'al_local_dia_palestra_settings',
+        'al_local_dia_palestra_data'
     );
 }
 
@@ -67,5 +98,23 @@ function al_local_dia_palestra_endereco()
     ?>
     <input type="text" id="al_local_dia_palestra_endereco"
            name="al_local_dia_palestra_endereco" required>
+    <?php
+}
+
+//Função callback cidade
+function al_local_dia_palestra_cidade()
+{
+    ?>
+    <input type="text" id="al_local_dia_palestra_cidade"
+           name="al_local_dia_palestra_cidade" required>
+    <?php
+}
+
+//Função callback data
+function al_local_dia_palestra_data()
+{
+    ?>
+    <input type="date" id="al_local_dia_palestra_data"
+           name="al_local_dia_palestra_data" required>
     <?php
 }

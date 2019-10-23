@@ -10,5 +10,12 @@ function al_local_dia_palestra_codigo_gerado()
                 frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
                 </iframe>
               </div>
+            </div>
+            <h2 class="proximo-evento">Próximo Evento</h2>
+            <div id="evento">
+                <div id="dias"></div>
+                <div id="horas"></div>
+                <div id="minutos"></div>
+                <div id="segundos"></div>
             </div>';
 }

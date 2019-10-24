@@ -1,0 +1,20 @@
+#evento{
+    display: flex;
+    margin-left: 3em
+}
+
+#evento div{
+    border: 1px solid;
+    padding: 30px;
+    background-color: #324C64;
+    color: #fff;
+    font-size: 2em;
+    margin-top: 2em
+}
+
+.proximo-evento{
+    margin-left: 3em;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 2em;
+}

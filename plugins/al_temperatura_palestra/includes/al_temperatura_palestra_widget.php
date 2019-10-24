@@ -1,5 +1,10 @@
 <?php
 
+add_action('widgets_init','al_temperatura_palestra_registra_widget');
+function al_temperatura_palestra_registra_widget(){
+    register_widget('TemperaturaPalestra');
+}
+
 class TemperaturaPalestra extends WP_Widget{
 
     public function __construct()
@@ -22,7 +27,7 @@ class TemperaturaPalestra extends WP_Widget{
         ?>
         <section class="container-temperatura">
             <p class="cidade-temperatura"><?= get_option('al_local_dia_palestra_cidade') ?></p>
-            <p class="temperatura"><?= round($resultadoArray['main']['temp'] -273.15) ?></p>
+            <p class="temperatura"><?= round($resultadoArray['main']['temp'] -273.15) ?> °C</p>
         </section>
         <?php
     }

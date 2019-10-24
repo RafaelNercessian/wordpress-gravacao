@@ -1,0 +1,19 @@
+.container-temperatura{
+    line-height: 2em;
+    border: 1px solid #324C64;
+    padding: 10px;
+    border-radius: 5px;
+    color: #FFF;
+    background: #324C64;
+    margin-bottom: 30px;
+}
+
+.cidade-temperatura{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.temperatura{
+    font-size: 1.3em;
+    text-align: center;
+}

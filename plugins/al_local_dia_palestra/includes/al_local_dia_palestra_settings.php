@@ -5,7 +5,7 @@ function al_local_dia_palestra_menu()
 {
     add_menu_page(
         'Local Palestra',
-        'Local Palestra',
+        __('Local Palestra','al_local_dia_palestra'),
         'manage_options',
         'local-palestra',
         'al_local_dia_palestra_menu_pagina',
@@ -18,7 +18,7 @@ function al_local_dia_palestra_menu_pagina()
 {
     ?>
     <div>
-        <h1>Local Palestras</h1>
+        <h1><?= __('Local Palestras','al_local_dia_palestra') ?></h1>
         <form method="post" action="options.php">
             <?php
             settings_errors();
@@ -37,7 +37,7 @@ function al_local_dia_palestra_secao()
     //Seção
     add_settings_section(
         'al_local_dia_palestra_secao',
-        'Configurações do local da palestra',
+        __('Configurações do local da palestra','al_local_dia_palestra'),
         'al_local_dia_palestra_campos_secao_detalhes',
         'local-palestra'
     );
@@ -45,7 +45,7 @@ function al_local_dia_palestra_secao()
     //Endereço
     add_settings_field(
         'al_local_dia_palestra_endereco',
-        'Endereço',
+        __('Endereço','al_local_dia_palestra'),
         'al_local_dia_palestra_endereco',
         'local-palestra',
         'al_local_dia_palestra_secao'
@@ -60,7 +60,7 @@ function al_local_dia_palestra_secao()
     //Cidade
     add_settings_field(
         'al_local_dia_palestra_cidade',
-        'Cidade',
+        __('Cidade','al_local_dia_palestra'),
         'al_local_dia_palestra_cidade',
         'local-palestra',
         'al_local_dia_palestra_secao'
@@ -75,7 +75,7 @@ function al_local_dia_palestra_secao()
     //Data
     add_settings_field(
         'al_local_dia_palestra_data',
-        'Data',
+        __('Data','al_local_dia_palestra'),
         'al_local_dia_palestra_data',
         'local-palestra',
         'al_local_dia_palestra_secao'
@@ -92,7 +92,7 @@ function al_local_dia_palestra_secao()
 function al_local_dia_palestra_campos_secao_detalhes()
 {
     ?>
-    <p>Insira os dados do endereço, cidade e data da próxima palestra da Alura</p>
+    <p><?= __('Insira os dados do endereço, cidade e data da próxima palestra da Alura','al_local_dia_palestra') ?></p>
     <?php
 }
 
@@ -134,7 +134,7 @@ function verifica_endereco($endereco){
         add_settings_error(
             'al_local_dia_palestra_mensagem_erro',
             'al_local_dia_palestra_erro_endereco',
-            'O campo endereço não pode ser vazio!',
+            __('O campo endereço não pode ser vazio!','al_local_dia_palestra'),
             'error'
         );
     }
@@ -148,7 +148,7 @@ function verifica_cidade($cidade){
         add_settings_error(
             'al_local_dia_palestra_mensagem_erro',
             'al_local_dia_palestra_erro_cidade',
-            'O campo cidade não pode ser vazio!',
+            __('O campo cidade não pode ser vazio!','al_local_dia_palestra'),
             'error'
         );
     }
@@ -162,7 +162,7 @@ function verifica_data($data){
         add_settings_error(
             'al_local_dia_palestra_mensagem_erro',
             'al_local_dia_palestra_erro_data',
-            'O campo data não pode ser vazio!',
+            __('O campo data não pode ser vazio!','al_local_dia_palestra'),
             'error'
         );
     }
